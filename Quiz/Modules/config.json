@@ -1,0 +1,19 @@
+{
+	"mail": {
+		"sender": {
+			"username": "YOUR_USERNAME",
+			"password": "YOUR_PASSWORD",
+			"address": "YOUR_ADDRESS",
+			"port": "YOUR_PORT",
+			"domain": "YOUR_DOMAIN",
+			"isSSL": false
+		},
+		"report": {
+			"from": "FROM_ADDRESS",
+			"bcc": [],
+			"cc": [],
+			"to": [],
+			"template": "templates/response.html"
+		}
+	}
+}
