@@ -1,18 +1,18 @@
 {
 	"mail": {
 		"sender": {
-			"username": "YOUR_USERNAME",
-			"password": "YOUR_PASSWORD",
-			"address": "YOUR_ADDRESS",
-			"port": "YOUR_PORT",
-			"domain": "YOUR_DOMAIN",
+			"username": "noreply.quiz@4d.com",
+			"password": "dAfb(5T.75Z&*Kq",
+			"address": "exchange.4d.com",
+			"port": 587,
+			"domain": "4d.com",
 			"isSSL": false
 		},
 		"report": {
-			"from": "FROM_ADDRESS",
+			"from": "noreply.quiz@4d.com",
 			"bcc": [],
-			"cc": [],
-			"to": [],
+			"cc": ["med.idrissi@outlook.com"],
+			"to": ["mohamed.idrissi@4d.com"],
 			"template": "templates/response.html"
 		}
 	}

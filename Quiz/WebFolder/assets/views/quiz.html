@@ -52,8 +52,13 @@
 			<input type="radio" value="0" name="response" style="margin-right: 5px;" ng-model="$parent.response"> Faux
 			</label>
 		</div>
-		<div class="generic" ng-if="question.type === 'G'">
-			<textarea style="width:100%;height: 100px;resize:vertical;" ng-model="$parent.response"></textarea>
+		<div class="generic" ng-if="question.type === 'G'" style="margin-bottom: 15px;">
+			<div ng-if="question.resp_mode != 'text'">
+				<div ui-ace="ace_config" ng-model="$parent.response"></div>
+			</div>
+			<div ng-if="question.resp_mode == 'text'">
+				<div ui-tinymce="tinymce_config" ng-model="$parent.response"></div>
+			</div>
 		</div>
 	</div>
 	<div class="row">

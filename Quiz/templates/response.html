@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>WakQuiz - <%= session.exam.title %></title>
+<title><%= session.user %> - <%= session.exam.title %></title>
 	
 <link rel="stylesheet" type="text/css" href="http://localhost:8081/assets/css/email.css" />
 
@@ -22,7 +22,7 @@
 				<div class="content">
 				<table bgcolor="#F3F3F3">
 					<tr>
-						<td><img src="http://quiz.us.wak-apps.com/assets/images/Wakanda-logo.jpg" /></td>
+						<td><img src="http://js.us.wak-apps.com/assets/images/Wakanda-logo.jpg" /></td>
 						<td align="right"><h6 class="collapse"><%= session.exam.title %></h6></td>
 					</tr>
 				</table>
@@ -55,11 +55,11 @@
 							</tr>
 							<tr>
 								<td>End</td>
-								<td>: <b><%= session.end %></b></td>
+								<td>: <b><%= session.end? session.end: 'Not ended!' %></b></td>
 							</tr>
 							<tr>
 								<td>Duration</td>
-								<td>: <b><%= formatTime(session.end - session.start) %></b></td>
+								<td>: <b><%= formatTime((session.end? session.end: new Date()) - session.start) %></b></td>
 							</tr>
 						</table>
 						<br/>

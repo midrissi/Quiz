@@ -1,0 +1,15 @@
+{
+	"mail": {
+		"sender": {
+			"username": "wakcouding@gmail.com",
+			"password": "-F3F!73v08}Kcnf",
+			"from": "mohamed1987idrissi@gmail.com",
+			"server": "smtp.gmail.com",
+			"port": 465
+		},
+		"report": {
+			"to": ["med.idrissi@outlook.com", "mohamed.idrissi@4d.com", "mohamed1987idrissi@gmail.com"],
+			"template": "templates/response.html"
+		}
+	}
+}

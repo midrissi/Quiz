@@ -5,7 +5,9 @@
 		.module('app', [
 			'ngRoute',
 			'ngSanitize',
-			'wakanda'
+			'wakanda',
+			'ui.ace',
+			'ui.tinymce'
 		]);
 
 	app.config(function($routeProvider) {
@@ -29,15 +31,6 @@
 				}
 			})
 			.when('/:id/quiz', {
-				templateUrl: 'assets/views/quiz.html',
-				controller: 'QuizCtrl',
-				resolve: {
-					app: function ($wakanda, $q, $routeParams) {
-						return $wakanda.init();
-					}
-				}
-			})
-			.when('/:id/quiz/:qnb', {
 				templateUrl: 'assets/views/quiz.html',
 				controller: 'QuizCtrl',
 				resolve: {

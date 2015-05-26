@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
 	<allow action="create" groupName="student" groupID="920F50FD9DB04563B3B25C22B33CC508" resource="Model.Response" temporaryForcePermissions="false" type="dataClass"/>
 	<allow action="update" groupName="student" groupID="920F50FD9DB04563B3B25C22B33CC508" resource="Model.Response" temporaryForcePermissions="false" type="dataClass"/>
-	<allow action="remove" groupName="student" groupID="920F50FD9DB04563B3B25C22B33CC508" resource="Model.Response" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="create" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Session" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Session" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Session" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Exam.start" temporaryForcePermissions="false" type="method"/>
+	<allow action="execute" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Session.send" temporaryForcePermissions="false" type="method"/>
+	<allow action="promote" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Utils.end" temporaryForcePermissions="false" type="method"/>
+	<allow action="promote" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Utils.start" temporaryForcePermissions="false" type="method"/>
+	<allow action="create" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Question" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Question" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Question" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="read" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Question.response" temporaryForcePermissions="false" type="attribute"/>
+	<allow action="create" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Exam" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Exam" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="teacher" groupID="C6B117D61A994C58B3E42A7F40579070" resource="Model.Exam" temporaryForcePermissions="false" type="dataClass"/>
 </permissions>

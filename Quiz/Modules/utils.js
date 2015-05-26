@@ -5,14 +5,20 @@ var config = require('config').mail;
 var sConf = config.sender;
 var rConf = config.report;
 
-exports.sendResponse = function(session) {
+exports.sendResponse = function(session, to) {
 	var report = exports.getReport(session);
 	var mail = new mailMod.Mail();
 
 	mail.from = rConf.from;
-	mail.to = rConf.to;
-	mail.cc = rConf.cc;
-	mail.bcc = rConf.bcc;
+	
+	if('string' === typeof to || Array.isArray(to)){
+		mail.to = to;
+	}else{
+		mail.to = rConf.to;
+		mail.cc = rConf.cc;
+		mail.bcc = rConf.bcc;
+	}
+	
 	mail.subject = "[Report][" + session.exam.title + "] User: " + session.user;
 	mail.setBodyAsHTML(report);
 	

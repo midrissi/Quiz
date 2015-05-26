@@ -70,6 +70,7 @@
 		return resp;
 	};
 	methods.getResponse.scope = 'public';
+
 	methods.respond = function respond (qID, response) {
 		var id = sessionStorage.SESS_ID;
 		

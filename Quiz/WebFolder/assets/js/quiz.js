@@ -7,6 +7,10 @@
 			$scope.time = 0;
 			$scope.response = null;
 			$scope.current = 0;
+			$scope.tinymce_config = {};
+			$scope.ace_config = {
+				mode: 'text'
+			};
 
 			var ds = $wakanda.$ds;
 			var interval;
@@ -16,7 +20,12 @@
 				params: [$routeParams.id]
 			});
 
-			$scope.questions.$promise.then(function() {
+			$scope.questions.$promise.then(function(ev) {
+				if(!ev.result || !Array.isArray(ev.result) || ev.result.length === 0 ){
+					location.href = '#/';
+					return;
+				}
+				
 				interval = setInterval(function() {
 					$scope.time += 1000;
 					$scope.$apply();
@@ -51,6 +60,11 @@
 					case 'M':
 						if (typeof q.options === 'string') {
 							q.options = JSON.parse(q.options)
+						}
+						break;
+					case 'G':
+						if(q.resp_mode){
+							$scope.ace_config.mode = q.resp_mode;
 						}
 						break;
 				}

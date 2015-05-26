@@ -1,5 +1,5 @@
 {
-  "name": "WakQuiz",
+  "name": "Wakanda",
   "version": "0.0.0",
   "authors": [
     "Mohamed IDRISSI <med.idrissi@outlook.com>"
@@ -25,6 +25,9 @@
     "bootstrap": "~3.3.2",
     "font-awesome": "~4.3.0",
     "modernizr": "~2.8.3",
-    "angular-sanitize": "~1.3.13"
+    "angular-sanitize": "~1.3.13",
+    "angular-ui-ace": "~0.2.3",
+    "ace-builds": "~1.1.8",
+    "angular-ui-tinymce": "latest"
   }
 }
